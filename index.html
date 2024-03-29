@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Number System Conversion</title>
+		<link
+			rel="stylesheet"
+			href="styles.css" />
+	</head>
+	<body>
+		<h1>Number System Conversion</h1>
+		<div class="container">
+			<section class="right">
+				<select id="from">
+					<option
+						value="fromBin"
+						selected>
+						Binary
+					</option>
+					<option value="fromDec">Decimal</option>
+					<option value="fromOct">Octal</option>
+					<option value="fromHex">Hexadecimal</option>
+				</select>
+				<input
+					type="number"
+					id="frominput" />
+			</section>
+			<section class="left">
+				<select id="to">
+					<option value="toBin">Binary</option>
+					<option
+						value="toDec"
+						selected>
+						Decimal
+					</option>
+					<option value="toOct">Octal</option>
+					<option value="toHex">Hexadecimal</option>
+				</select>
+				<input
+					type="number"
+					id="output"
+					disabled />
+			</section>
+
+			<h2 id="errorMsg"></h2>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>

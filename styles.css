@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Reddit Mono", monospace;
+}
+body {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	min-height: 90vh;
+	gap: 6rem;
+	background-color: black;
+}
+h1 {
+	color: white;
+	font-size: 3rem;
+	max-width: 20rem;
+	letter-spacing: 0.3rem;
+}
+h2 {
+	color: white;
+}
+.container {
+	background-color: rgb(2, 2, 2);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	color: white;
+	width: 60vh;
+	max-width: 30rem;
+	border-radius: 1rem;
+	box-shadow: 0 1.2rem 2.5rem rgba(0, 21, 44, 0.18);
+	gap: 1rem;
+}
+#output {
+	background-color: white;
+}
+select {
+	width: 9rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+}
+input,
+select {
+	padding: 0 0.5rem;
+}
+input {
+	width: 15rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+	text-transform: uppercase;
+}
+.left,
+.right {
+	gap: 0.5rem;
+}
+.right {
+	display: flex;
+	align-items: start;
+	justify-content: end;
+	flex-direction: column;
+}
+.left {
+	display: flex;
+	align-items: end;
+	justify-content: end;
+	flex-direction: column;
+}
+#errorMsg {
+	position: absolute;
+	bottom: 30%;
+	right: 11%;
+	color: #ff4362;
+	font-weight: 100;
+}
+
+@media screen and (max-width: 1024px) {
+	#errorMsg {
+		bottom: 30%;
+		right: 8%;
+		font-size: large;
+		font-weight: 100;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		padding: 0 3rem;
+	}
+	h1 {
+		font-size: 2.5rem;
+	}
+	input {
+		width: 12rem;
+	}
+	#errorMsg {
+		bottom: 30%;
+		right: 5%;
+		font-size: medium;
+		font-weight: 100;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1rem;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	input {
+		width: 12rem;
+	}
+	#errorMsg {
+		bottom: 10%;
+		right: 8%;
+		font-size: large;
+		font-weight: 100;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	body {
+		padding: 0 2rem;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	input {
+		width: 10rem;
+	}
+	input,
+	select {
+		padding: 0 0.2rem;
+	}
+	select {
+		width: 7rem;
+		height: 2rem;
+		font-size: 0.7rem;
+	}
+	#errorMsg {
+		bottom: 30%;
+		right: 2%;
+		font-size: small;
+		font-weight: 100;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	body {
+		padding: 0 1rem;
+		gap: 2rem;
+		text-align: center;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	input {
+		width: 10rem;
+	}
+	.container {
+		max-width: 10rem;
+	}
+	input,
+	select {
+		padding: 0 0.2rem;
+	}
+	select {
+		width: 7rem;
+		height: 2rem;
+		font-size: 0.7rem;
+	}
+	#errorMsg {
+		bottom: 30%;
+		right: 2%;
+		font-size: small;
+		font-weight: 100;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1rem;
+	}
+	.container {
+		max-width: 12rem;
+		align-items: center;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	input {
+		width: 10rem;
+	}
+	#errorMsg {
+		text-align: center;
+		bottom: 10%;
+		left: 15%;
+		font-size: x-small;
+		font-weight: 100;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1rem;
+	}
+	.container {
+		max-width: 12rem;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	input {
+		width: 10rem;
+	}
+	#errorMsg {
+		text-align: center;
+		bottom: 10%;
+		right: 20%;
+		font-size: smaller;
+		font-weight: 100;
+	}
+}
+
+@media screen and (max-width: 264px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1rem;
+		gap: 3rem;
+	}
+	.container {
+		max-width: 12rem;
+	}
+	h1 {
+		font-size: 1.8rem;
+	}
+	input {
+		width: 10rem;
+	}
+	#errorMsg {
+		text-align: center;
+		bottom: 15%;
+		font-size: small;
+		font-weight: 100;
+	}
+}
+
+@media screen and (max-width: 230px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1rem;
+		gap: 3rem;
+	}
+	.container {
+		max-width: 10rem;
+	}
+	h1 {
+		font-size: 1.5rem;
+	}
+	input {
+		width: 8rem;
+	}
+	#errorMsg {
+		text-align: center;
+		font-size: x-small;
+		font-weight: 100;
+	}
+	input,
+	select {
+		padding: 0 0.2rem;
+		font-size: 0.6rem;
+	}
+	select {
+		width: 5rem;
+		height: 2rem;
+	}
+}
